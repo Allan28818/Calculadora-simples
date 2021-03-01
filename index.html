@@ -4,36 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
   <script language = "JavaScript" src="./caculator.js"></script>
   <title>Calculadora Simples</title>
 </head>
 <body>
   <form action="" name = "calc">
-    <div id = "calculadora">
+    <div id = "calculator">
       <input id = "visor" name = "visor">
-      <div id = "primeira">
-        <input type = "button" value = "7" class = "button border" onclick="button(value)">
-        <input type = "button" value = "8" class = "button border" onclick="button(value)">
-        <input type = "button" value = "9" class = "button border" onclick="button(value)">    
-        <input type = "button" value = "/" class = "button border" onclick="button(value)">  
+      <div id = "first">
+        <button type = "button" value = "C" class = "clear" onclick="reset()">C</button>
+        <button type = "button" value = "÷100" class = "percent" onclick="button(value)">%</button>
+        <button type = "button" value = "÷" class = "division" onclick="button(value)">÷</button>
+        <button type = "button" value = "×" class = "operation-button mult" onclick="button(value)">×</button>
       </div>
-      <div id = "primeira">
-        <input type = "button" value = "4" class = "button border" onclick="button(value)">
-        <input type = "button" value = "5" class = "button border" onclick="button(value)">
-        <input type = "button" value = "6" class = "button border" onclick="button(value)">    
-        <input type = "button" value = "*" class = "button border" onclick="button(value)">  
+      <div id = "second">
+        <button type = "button" value = "7" class = "button-number" onclick="button(value)">7</button>
+        <button type = "button" value = "8" class = "button-number" onclick="button(value)">8</button>
+        <button type = "button" value = "9" class = "button-number" onclick="button(value)">9</button>   
+        <button type = "button" value = "-" class = "operation-button sub" onclick="button(value)">-</button>
       </div>
-      <div id = "primeira">
-        <input type = "button" value = "1" class = "button border" onclick="button(value)">
-        <input type = "button" value = "2" class = "button border" onclick="button(value)">
-        <input type = "button" value = "3" class = "button border" onclick="button(value)">    
-        <input type = "button" value = "-" class = "button border" onclick="button(value)">  
+      <div id = "third">
+        <button type = "button" value = "4" class = "button-number" onclick="button(value)">4</button>
+        <button type = "button" value = "5" class = "button-number" onclick="button(value)">5</button>
+        <button type = "button" value = "6" class = "button-number" onclick="button(value)">6</button>
+        <button type = "button" value = "+" class = "operation-button add" onclick="button(value)">+</button>
       </div>
-      <div id = "quarta">
-        <input type = "button" value = "C" class = "button border" onclick="reset()">
-        <input type = "button" value = "0" class = "button border" onclick="button(value)">
-        <input type = "button" value = "=" class = "button border" onclick="calculate()">    
-        <input type = "button" value = "+" class = "button border" onclick="button(value)">  
+      <div id = "fourth">
+        <button type = "button" value = "1" class = "button-number" onclick="button(value)">1</button>
+        <button type = "button" value = "2" class = "button-number" onclick="button(value)">2</button>
+        <button type = "button" value = "3" class = "button-number" onclick="button(value)">3</button>
+        <button type = "button" value = "=" class = "equal" onclick="calculate()">=</button>
+      </div>
+      <div id = "fifth">        
+        <button type = "button" value = "0" class = "zero" onclick="button(value)">0</button>                
       </div>
       
     </div>
