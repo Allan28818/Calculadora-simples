@@ -1,0 +1,842 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background: rgb(29, 27, 27);
+}
+
+
+@media(min-width: 280px) {
+    
+  #calculator {
+    width: 250px;
+    height: 400px;
+    background: rgb(46, 43, 43);
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 0px 30px 0px #027e028e;
+  }
+
+  #visor {
+    width: 100%;
+    height: 65px;
+    background: rgb(63, 59, 59);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+
+  #first, #second,
+  #third, #fourth,
+  #fifth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    font-size: 15px;
+    border: none;
+    color: #fff;
+  }
+
+  .equal,
+  .operation-button {
+    height: 50px;
+    width: 50px;
+    margin: 5px 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    transition: all 0.5s;
+  }
+
+
+  .clear,
+  .percent,
+  .division,
+  .button-number{
+    height: 50px;
+    width: 50px;
+    margin: 1.5px;
+    border-radius: 100%;
+    transition: 0.5s;
+    background: rgb(63, 59, 59);
+  }
+
+  .operation-button {
+    background: rgb(63, 59, 59);
+  }
+
+  .clear {
+    color:rgb(206, 39, 39);
+  }
+
+  .zero {
+    width: 150px;
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 50px;  
+    transition: all 0.5s;
+    background: rgb(63, 59, 59);
+  }
+
+  .zero:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .equal {
+    color: #fff;
+    background: #05a805;
+  }
+
+  .equal:active {
+    transition: 0.2s;
+    color: #05a805;
+    background-color: rgb(63, 59, 59);
+    transition: 0.5;
+    animation: rotation .5s ease;
+  }
+
+  .button-number:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .add:active {
+    transition: 0.2s;
+    background: #fff;
+    color:rgb(63, 59, 59);
+  }
+
+  .sub:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .mult:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+  
+  .division:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .percent:active {
+    color: #fff;
+    background: #05a805;
+  }
+
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    25% {
+      transform: rotate(180deg);
+    }
+
+    50% {
+      transform: rotate(360deg);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+@media(min-width: 320px) {
+    
+  #calculator {
+    width: 280px;
+    height: 420px;
+    background: rgb(46, 43, 43);
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: none;
+  }
+
+  #visor {
+    width: 100%;
+    height: 65px;
+    background: rgb(63, 59, 59);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border: none;
+    border-bottom: 1px solid #027e02;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 3.5px 6px 0px #027e02;      
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+
+  #first, #second,
+  #third, #fourth,
+  #fifth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    font-size: 20px;
+    border: none;
+    color: #fff;
+  }
+
+  .equal,
+  .operation-button {
+    height: 55px;
+    width: 55px;
+    margin: 5px 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    transition: all 0.5s;
+  }
+
+
+  .clear,
+  .percent,
+  .division,
+  .button-number{
+    height: 55px;
+    width: 55px;
+    margin: 1.5px;
+    border-radius: 15px;
+    transition: 0.5s;
+    background: rgb(63, 59, 59);
+  }
+
+  .operation-button {
+    background: rgb(63, 59, 59);
+  }
+
+  .clear {
+    color:rgb(206, 39, 39);
+  }
+
+  .zero {
+    width: 250px;
+    height: 60px;
+    margin-right: 15px;
+    margin-top: 5px;
+    border-radius: 50px;  
+    transition: all 0.5s;
+    background: rgb(63, 59, 59);
+  }
+
+  .zero:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .equal {
+    color: #fff;
+    background: #05a805;
+  }
+
+  .equal:active {
+    transition: 0.2s;
+    color: #05a805;
+    background-color: rgb(63, 59, 59);
+    transition: 0.5;
+    animation: rotation .5s ease;
+  }
+
+  .button-number:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .add:active {
+    transition: 0.2s;
+    background: #fff;
+    color:rgb(63, 59, 59);
+  }
+
+  .sub:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .mult:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+  
+  .division:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .percent:active {
+    color: #fff;
+    background: #05a805;
+  }
+
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    25% {
+      transform: rotate(180deg);
+    }
+
+    50% {
+      transform: rotate(360deg);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+@media(min-width: 411px) {
+    
+  #calculator {
+    width: 350px;
+    height: 500px;
+    background: rgb(46, 43, 43);
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: none;
+  }
+
+  #visor {
+    width: 100%;
+    height: 80px;
+    background: rgb(63, 59, 59);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    color: #fff;
+    box-shadow: none;      
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+
+  #first, #second,
+  #third, #fourth,
+  #fifth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    font-size: 25px;
+    border: none;
+    color: #fff;
+  }
+
+  .equal,
+  .operation-button {
+    height: 65px;
+    width: 65px;
+    margin: 5px 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    transition: all 0.5s;
+  }
+
+
+  .clear,
+  .percent,
+  .division,
+  .button-number{
+    height: 65px;
+    width: 65px;
+    margin: 3px;
+    border-radius: 25px;
+    transition: 0.5s;
+    background: rgb(63, 59, 59);
+  }
+
+  .operation-button {
+    background: rgb(63, 59, 59);
+  }
+
+  .clear {
+    color:rgb(206, 39, 39);
+  }
+
+  .zero {
+    width: 300px;
+    height: 80px;
+    margin-right: 12.5px;
+    margin-top: 5px;
+    border-radius: 30px;  
+    transition: all 0.5s;
+    background: rgb(63, 59, 59);
+  }
+
+  .zero:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .equal {
+    color: #fff;
+    background: #05a805;
+  }
+
+  .equal:active {
+    transition: 0.2s;
+    color: #05a805;
+    background-color: rgb(63, 59, 59);
+    transition: 0.5;
+    animation: rotation .5s ease;
+  }
+
+  .button-number:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .add:active {
+    transition: 0.2s;
+    background: #fff;
+    color:rgb(63, 59, 59);
+  }
+
+  .sub:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .mult:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+  
+  .division:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .percent:active {
+    color: #fff;
+    background: #05a805;
+  }
+
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    25% {
+      transform: rotate(180deg);
+    }
+
+    50% {
+      transform: rotate(360deg);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+@media(min-width: 768px) {
+    
+  #calculator {
+    width: 700px;
+    height: 700px;
+    background: rgb(46, 43, 43);
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 35px;
+    border: none;
+    box-shadow: none;
+  }
+
+  #visor {
+    width: 100%;
+    height: 100px;
+    background: rgb(63, 59, 59);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border: none;
+    text-align: center;
+    color: #fff;
+    box-shadow: none;      
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  #first, #second,
+  #third, #fourth,
+  #fifth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    font-size: 30px;
+    border: none;
+    color: #fff;
+  }
+
+  .equal,
+  .operation-button {
+    height: 95px;
+    width: 95px;
+    margin: 10px 20px;
+    border-radius: 25px;
+    font-size: 35px;
+    transition: all 0.5s;
+  }
+
+
+  .clear,
+  .percent,
+  .division,
+  .button-number{
+    height: 95px;
+    width: 95px;
+    margin: 10px;
+    border-radius: 25px;
+    transition: 0.5s;
+    background: rgb(63, 59, 59);
+  }
+
+  .operation-button {
+    background: rgb(63, 59, 59);
+  }
+
+  .clear {
+    color:rgb(206, 39, 39);
+  }
+
+  .zero {
+    width: 480px;
+    height: 100px;
+    margin-right: 12.5px;
+    margin-top: 5px;
+    border-radius: 30px;  
+    border: 2px solid #fff;
+    transition: all 0.5s;
+    background: rgb(63, 59, 59);
+  }
+
+  .zero:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .equal {
+    color: #fff;
+    background: #05a805;
+  }
+
+  .equal:active {
+    transition: 0.2s;
+    color: #05a805;
+    background-color: rgb(63, 59, 59);
+    transition: 0.5;
+    animation: rotation .5s ease;
+  }
+
+  .button-number:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .add:active {
+    transition: 0.2s;
+    background: #fff;
+    color:rgb(63, 59, 59);
+  }
+
+  .sub:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .mult:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+  
+  .division:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .percent:active {
+    color: #fff;
+    background: #05a805;
+  }
+
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    25% {
+      transform: rotate(180deg);
+    }
+
+    50% {
+      transform: rotate(360deg);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+@media(min-width: 1024px) {
+    
+  #calculator {
+    width: 500px;
+    height: 600px;
+    background: rgb(46, 43, 43);
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 30px;
+    border: none;
+  }
+
+  #visor {
+    width: 100%;
+    height: 100px;
+    background: rgb(63, 59, 59);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border: none;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    margin-bottom: 5px;
+  }
+
+  #first, #second,
+  #third, #fourth,
+  #fifth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    font-size: 30px;
+    border: none;
+    color: #fff;
+  }
+
+  .equal,
+  .operation-button {
+    height: 80px;
+    width: 80px;
+    margin: 10px 20px;
+    border-radius: 25px;
+    font-size: 35px;
+    transition: all 0.5s;
+  }
+
+
+  .clear,
+  .percent,
+  .division,
+  .button-number{
+    height: 80px;
+    width: 80px;
+    margin: 2.5px;
+    border-radius: 30px;
+    transition: 0.5s;
+    background: rgb(63, 59, 59);
+  }
+
+  .operation-button {
+    background: rgb(63, 59, 59);
+  }
+
+  .clear {
+    color:rgb(206, 39, 39);
+  }
+
+  .clear:hover {
+    color: #fff;
+    background: rgb(206, 39, 39);
+  }
+
+  .zero {
+    width: 360px;
+    height: 80px;
+    margin-right: 15px;
+    border-radius: 20px;  
+    transition: all 0.5s;
+    background: rgb(63, 59, 59);
+  }
+
+  .zero:hover{
+    background-color: rgb(80, 80, 80);
+  }
+
+  .zero:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .equal {
+    color: #fff;
+    background: #05a805;
+  }
+
+  .equal:hover {
+    background: #027e02;
+  }
+
+
+  .equal:active {
+    transition: 0.2s;
+    color: #05a805;
+    background-color: rgb(63, 59, 59);
+  }
+
+  .button-number:hover {
+    background-color: rgb(80, 80, 80);
+  }
+
+  .button-number:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+
+  .add:hover {
+    color: #32cd32;
+  }
+
+  .add:active {
+    transition: 0.2s;
+    background: #fff;
+    color:rgb(63, 59, 59);
+  }
+
+  .sub:hover {
+    color: rgb(206, 39, 39);
+  }
+
+  .sub:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .mult:hover {
+    animation: rotation .7s;
+  }
+
+  .mult:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .division:hover {
+    animation: shake .7s;
+    transition: ease;
+  }
+
+  .division:active {
+    transition: 0.2s;
+    color: #fff;
+    background: rgb(22, 22, 22);
+  }
+
+  .percent:hover {
+    transition: 0.5s;
+    color: #05a805;
+  }
+
+  .percent:active {
+    color: #fff;
+    background: #05a805;
+  }
+
+
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      margin-top: 0px;
+    }
+    25% {
+      margin-top: 5px;
+    }
+    50% {
+      margin-top: -5px;
+    }
+    75% {
+      margin-top: 5px;
+    }
+    100% {
+      margin-top: 0px;
+    }
+  }
+
+
+}

@@ -10,6 +10,9 @@ function reset() {
 }
 
 function calculate() {
+
+  value = value.replace("×", "*");
+  value = value.replace("÷", "/");
   result = eval(value);
   document.calc.visor.value = result.toLocaleString('pt-br');
 }
